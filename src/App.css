@@ -1,0 +1,77 @@
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0vw;
+  padding: 10px; /* Adjust as needed */
+  z-index: 1000;
+}
+
+.nav-name{
+  margin-left: 30px;
+}
+
+.nav-buttons button {
+  background-color: transparent;
+  color: white; 
+  border: none; /* Removes the default button border*/
+  padding: 10px 15px; /* for better button sizing */
+  margin: 0 5px; /* or spacing between buttons */
+  cursor: pointer; /* Changes the cursor to indicate it's clickable */
+  margin-right: 30px;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  filter: drop-shadow(0 0 2em #ffffff)
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
