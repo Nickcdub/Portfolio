@@ -1,8 +1,3 @@
-# React + Vite
+# Nicholas Curwood's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I got some practice in with my sudoku solver app and I would like to move on to something more challenging. My goal with this portfolio is to display some of my achievements while also getting some experience using react to design and build a functional website. 
