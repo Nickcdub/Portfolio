@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../App.css';
+import './NavBar.css';
 
 export const NavBar = () => {
     const [isNavExpanded, setIsNavExpanded] = useState(false);

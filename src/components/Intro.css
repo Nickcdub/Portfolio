@@ -1,0 +1,50 @@
+#root > .intro {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+.intro{
+    width: 100vw;
+    height: 150vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+}
+
+.intro-text{
+    font-weight: bold;
+    font: bold;
+    color: white;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 30%;
+    text-shadow: 0 0 10px #9900ff;
+}
+
+/* image overlay from front to back*/
+.intro-img, .intro-img1, .intro-img2, .intro-img3 ,.intro-img4{
+    width: 100vw;
+    height: 150vh;
+    position: absolute; /* If you want them to directly overlay each other */
+    top: 0;
+    left: 0;
+    background-position: center 75%;
+}
+
+.intro-img1{
+    z-index: 30;
+}
+
+.intro-img2{
+    z-index: 20;
+}
+
+.intro-img3{
+    z-index: 5;
+}
+
+.intro-img4{
+    z-index: 0;
+}

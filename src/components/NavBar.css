@@ -1,0 +1,93 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full width */
+    color: white;
+    background-color: rgb(63, 6, 161, 0.602);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0vw;
+    padding: 10px; /* Adjust as needed */
+    z-index: 1000;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .nav-name{
+    margin-left: 30px;
+  }
+  
+  .nav-toggle {/* hamburger icon*/
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) { /* Adj */
+  
+    .nav {
+      background-color: transparent;
+      flex-direction: column;
+      align-items: start;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    }
+  
+    .nav .nav-buttons button{
+      width: 100%;
+    }
+    /*Drop Down Menu*/
+    .nav .nav-buttons {
+        display: none;
+        background-color: rgba(47, 2, 162, 0.353);
+        flex-direction: column;
+        margin-left: auto;
+        box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+    }
+  
+    .nav-buttons.active{
+      display: flex;
+    }
+  
+    .nav-header {
+      background-color: rgba(63, 6, 161, 0.602);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+    }
+  
+    .nav-toggle {
+      display: block;
+      margin-left: auto;
+      background-color: transparent;
+      font-size: x-large;
+      outline: none;
+      color: white;
+    }
+  }
+  
+  .nav-buttons button {
+    background-color: transparent;
+    color: white; 
+    border: none; /* Removes the default button border*/
+    padding: 10px 15px; /* for better button sizing */
+    margin: 0 5px; /* or spacing between buttons */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+    margin-right: 30px;
+    justify-content: space-between;
+  }
+  
+  .nav button:hover {
+    color: rgb(231, 225, 57); /* Sets the background color on hover */
+    outline: none;
+    background-color: transparent;
+  }
+  
+  .nav button:focus {
+    color: rgb(174, 151, 3) ; /* Sets the background color on hover */
+    outline: none;
+    background-color: transparent;
+  }
