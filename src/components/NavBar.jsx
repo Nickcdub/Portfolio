@@ -8,15 +8,23 @@ export const NavBar = () => {
         <>
             <nav className="nav">
                 <div className='nav-header'>
-                    <h2 className='nav-name'>Nicholas Curwood</h2>
+                    <h2 
+                        className='nav-name'
+                        onClick={() => document.getElementById('Intro').scrollIntoView({ behavior: 'smooth' })}
+                    >
+                        Nicholas Curwood</h2>
                     <button 
                         className={`nav-toggle ${isNavExpanded ? 'active' : ''}`}
                         onClick={() => setIsNavExpanded(!isNavExpanded)}
                     >☰</button>
                 </div>
                 <div className={`nav-buttons ${isNavExpanded ? 'active' : ''}`}>
-                  <button>About Me</button>
-                  <button>Projects</button>
+                <button onClick={() => document.getElementById('About').scrollIntoView({ behavior: 'smooth' })}>
+                    About Me
+                </button>
+                  <button onClick={() => document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' })}>
+                    Projects
+                </button>
                   <button>Certifications</button>
                   <button>Contact</button>
                 </div>

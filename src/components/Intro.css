@@ -11,20 +11,28 @@
     overflow: hidden;
     position: relative;
     background-color: black;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
 }
 
-.intro-text{
-    font-weight: bold;
-    font: bold;
+.intro-text {
+    width: 100%; /* Take the full width to center text properly */
+    height: 100%; /* Full height to align text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Ensure text within Typewriter is centered */
+    position: absolute; /* Corrected: Remove the duplicate position property */
+    font-weight: bold; /* Adjust if 'font' shorthand is not intended for other font properties */
     color: white;
-    position: relative;
     z-index: 10;
-    padding-bottom: 30%;
     text-shadow: 0 0 10px #9900ff;
+    background-image: url('../assets/img/Stars.svg'); /* Add your background image */
+    background-size: cover; /* Ensure the image covers the element */
+    background-position: center; /* Center the background image */
 }
 
 /* image overlay from front to back*/
-.intro-img, .intro-img1, .intro-img2, .intro-img3 ,.intro-img4{
+.intro-img, .intro-img1, .intro-img2, .intro-img3{
     width: 100vw;
     height: 150vh;
     position: absolute; /* If you want them to directly overlay each other */
@@ -42,9 +50,5 @@
 }
 
 .intro-img3{
-    z-index: 5;
-}
-
-.intro-img4{
     z-index: 0;
 }

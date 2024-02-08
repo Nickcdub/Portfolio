@@ -4,6 +4,10 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import { NavBar } from './components/NavBar';
 import { Intro } from './components/Intro';
+import { AboutMe } from './components/AboutMe';
+import { Projects } from './components/Projects';
+import { Certifications } from './components/Certifications';
+import { Contacts } from './components/Contacts';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -12,6 +16,10 @@ function App() {
         <>
             <NavBar />
             <Intro />
+            <AboutMe />
+            <Projects />
+            <Certifications />
+            <Contacts />
             <div>
                 <a href="https://vitejs.dev" target="_blank">
                     <img src={viteLogo} className="logo" alt="Vite logo" />
