@@ -1,112 +1,131 @@
-import React from 'react';
-import Typewriter from 'typewriter-effect';
+import React, {useState} from 'react';
+import { useInView } from 'react-intersection-observer'; 
+import Profile from '../assets/img/Profile.svg'
+//For rendering as components come in view
 import './AboutMe.css'
 
-const text1 = 
-"Hello! I am Nicholas Curwood, a recent Computer Science graduate and aspiring Software Engineer. Growing up, I always enjoyed problem-solving, whether it involved tackling mathematical challenges or diving into a game of Sudoku; imagining logical solutions to complex problems was always an immensely gratifying experience. In time, I developed a passion for coding by implementing a rudimentary Python stoichiometry calculator for a high school chemistry class. After sharing it with some of my classmates, I discovered the unique satisfaction of getting to construct a solution to help myself and others overcome a problem."
+const personal = "Hello, my name is Nick, I am a passionate problem solver and aspiring Software "
++"Engineer. I began solving problems through software"
++" after discovering the tediousness of balancing chemical equations in high school chemistry."
++" From there, I didn’t wait for the opportunity to strike me, I decided that in class or not, "
++"I wanted to learn more about leveraging software tools and languages to solve problems. Since "
++"then, I have graduated from the University of Washington with a Bachelor's of Science in Computer "
++"Science and Systems. I’ve learned so much since that first print(“Hello World!”) "
++"and I am excited to find an opportunity to put my knowledge towards solving meaningful problems"+
+" (beyond high school chemistry)."
 
-const text2 =
-"Studying computer science at the University of Washington, I was presented with many opportunities to grow my passion in software development. I applied various technologies, frameworks, and techniques such as Java, JavaScript, C#, Python, SQL, React, Agile practices, among others. I had the privilege of collaborating with diverse teams, where we adeptly employed agile methodologies to reach and occasionally exceed our ambitious objectives. Some of my accomplishments include:"
+const education = "Education"
 
-const list1 =
-"Leading a team of three in developing a full-stack Java dungeon adventure game. We utilized the MVC"+
-" architectural framework, used SQL for our database, and maintained version control with Git"
-
-const list2 =
-"Collaborating with a team of three to enhance a venture into artificial life. Employing JavaScript,"+
-" HTML, and Python, we implemented and logged data to investigate the impact of binary vision on"+
-" artificial predators"
-
-const list3 =
-"Applying Python to interact with the Keras API to research the effectiveness of Convolutional Neural"+
-" Networks(CNN) vs. Bag of Words(BoW) for sentiment analysis. I recorded a 20% increase in effective"+
-" identification for CNN over BoW"
-
-const text3 =
-"Immediately after graduation, I decided to pursue my AWS Cloud Practitioner Certification. At the time I knew that cloud was a great resource for deploying applications with agility to a global user base, but I wanted to learn a little more about the various services and business model. Once I had achieved my Cloud Practitioner Cert., I began to study for my CompTIA Security+ Certification. With cyberthreats becoming more prevalent within the digital world, knowledge of threats, vulnerabilities, and mitigation steps are an increasingly essential skill to maintain within all facets of the development process."
-
-const text4 =
-"Since achieving my Security+ and Cloud Practitioner Certs., I have continued to work on personal projects as well as dive into new topics surrounding emerging technologies. I hope to one day have the opportunity to use all that I’ve learned to make significant contributions towards meaningful goals in a dynamic setting."
+const skills = "Skills"
 
 export function AboutMe() {
-    const blueColor = '#509DF9'//This hex color is for the color blue 
-    const orangeColor = 'rgb(250, 106, 29)'
+    //For the Carousel indeces
+    const [activeIndex, setActiveIndex] = useState(0)
+    
+    //The text items to be displayed for each Carousel index
+    const items = [personal, personal, personal]
+    
+    //For "Fade In" affect on components
+    const { ref, inView } = useInView({
+        threshold: 0.5, // Trigger when 10% visible
+        triggerOnce: true // Trigger animation once
+        // use {inView && ( <></> )} Don't forget in parent ref={ref} 
+      });
 
+
+//Carousel ---------------------------------------------------------------
+
+      const Carousel = () => {
+        return(
+            <div className='carousel' ref={ref}>
+                {inView && (
+                <div className='carousel-inner'
+                style={{transform: `translateX(-${activeIndex * 100}%)`}}>
+                     {items.map((item, index) => (
+                        <div className="carousel-item" key={index}>
+                            {item}
+                        </div>
+                    ))}
+                </div>
+                )}
+            </div>
+        );
+    }
+
+//Function to style the buttons ----------------------------------------------
+
+    function getButtonStyle(index){
+        return{
+            background: activeIndex === index ? 'linear-gradient(to right, blue, magenta)' : 'transparent',
+            color: activeIndex === index ? 'white' : 'initial',
+            padding: '10px 10px', // Adjust padding to make the background appear "smaller"
+            borderRadius: '20px', // Increase border-radius for more rounded corners
+            borderColor: 'white',
+            
+        }
+    }
+
+//Functions to style smooth rendering once in view
+    function hiddenStyle() {
+        return {
+            opacity: '0',
+             transform: 'translateY(70px)',
+            transition: 'opacity 1.1s ease-out, transform 1.1s ease-out'
+        };
+    }
+  
+    function visibleStyle() {
+        return {
+        opacity: '1',
+        transform: 'translateY(0)',
+        transition: 'opacity 1.1s ease-out, transform 1.1s ease-out' // Ensure transition applies to both states
+        };
+    }
+
+    const transitionStyle = inView ? visibleStyle() : hiddenStyle();
+
+//About Me -------------------------------------------------------------------
 
     return(
-        <div id='About' className='about'>
-            <h2 className='about-header'>
-                {component('<','h1','>', orangeColor)}
-                <div className='about-title'>
-                    {textTyper("About Me",100)}
-                </div>
-                {component('</','h1','>', orangeColor)}
-            </h2>
-            <div className='about-body'>
-                {component('<','span','>', orangeColor)}
-                <span className='about-text1'>
-                    {textTyper(text1,1)}
+        <div id='About' className='about' ref={ref}>
+            <div style={transitionStyle}>
+            <h1 className='about-header'>
+                    <>
+                        <div className='about-header-number'>
+                            01
+                        </div>
+                        <div className='about-title'>
+                            About Me
+                        </div>
+                    </>
+            </h1>
+            <div className='about-body' ref={ref}>
+                {inView && (<img src={Profile} className="about-profile"/>)}
+                <span className='about-text'>
+                    {Carousel()}
                 </span>
-                {component('</','span','>', orangeColor)}
-                {component('<','span','>', orangeColor)}
-                <span className='about-text2'>
-                    {textTyper(text2,1)}
-                </span>
-                <div className='about-list'>
-                    {component('<','ul','>', orangeColor)}
-                    <ul className='about-text-list' style={{paddingLeft: '30px'}}>
-                        <li>{textTyper(list1,1)}</li>
-                        <li>{textTyper(list2,1)}</li>
-                        <li>{textTyper(list3,1)}</li>
-                    </ul>
-                    {component('</','ul','>', orangeColor)}
-                </div>
-                {component('</','span','>', orangeColor)}
-                {component('<','span','>', orangeColor)}
-                <span className='about-text1'>
-                    {textTyper(text3,1)}
-                </span>
-                {component('</','span','>', orangeColor)}
-                {component('<','span','>', orangeColor)}
-                <span className='about-text1'>
-                    {textTyper(text4,1)}
-                </span>
-                {component('</','span','>', orangeColor)}
-
+            </div>
+            {inView && (
+            <div className='about-toggle'>
+                <button className='about-toggle-personal'
+                    style={getButtonStyle(0)}
+                    onClick={() => setActiveIndex(0)}>
+                        Personal
+                </button>
+                <button className='about-toggle-education'
+                    style={getButtonStyle(1)}
+                    onClick={() => setActiveIndex(1)}>
+                        Education
+                </button>
+                <button className='about-toggle-skills'
+                    style={getButtonStyle(2)}
+                    onClick={() => setActiveIndex(2)}>
+                        Skills
+                </button>
+            </div>
+            )}
             </div>
         </div>
     );
-}
-
-//This 
-function textTyper(text, delay){//Delay refers to speed, lower = faster
-    return(
-        <Typewriter
-            onInit={(Typewriter) => {
-            //Use <br /> for my new lines (\n)
-                Typewriter
-                .typeString(text)
-                .start();
-            }}
-            options={{
-                delay: delay,
-            }}
-        />
-    );
-}
-
-function component(start, body, end, color){
-    return (
-        <div style={{
-            display: 'flex'
-        }}>
-          {/* Render the less than sign */}
-          <span className="angle-brackets">{start}</span>
-          {/* Render the span text in blue */}
-          <span className="span-text" style={{color: color, textShadow: "0 0 10px "+color}}>{body}</span>
-          {/* Render the greater than sign */}
-          <span className="angle-brackets">{end}</span>
-        </div>
-      );
 }
 

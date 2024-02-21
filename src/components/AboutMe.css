@@ -1,30 +1,152 @@
 .about{
-    background-image: url('../assets/img/img-jsx.svg');
-    background-size: cover; /* Ensure the image covers the element */
-    background-position: center; /* Center the background image */
-    min-width: 100vw; /* Or 'height: 100vh;' if you don't need it to grow */
-    width: 100vw;
-    padding-top: 10px;
-    text-shadow: 0 0 10px #a7a5a5;
-    color: #c1c1c1;
+    background-image: url('../assets/img/About-Background.svg');
+    min-height: 99vh;
+    padding: 3vh;
+}
+
+/*Title and Number ----------------------------------------------------*/
+
+.about-header-number {
+    position: relative;
+    display: inline-block; /* Ensures the pseudo-element aligns correctly */
+}
+
+.about-header-number:after {
+    content: '';
+    display: block;
+    width: 200%; /* Line width */
+    height: 2px; /* Line thickness */
+    background-color: #ee76d4; /* Line color */
+    box-shadow: 0 0 10px #ff00c8; /* Adjust shadow color and spread as needed */
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Adjusts the space between the text and the line */
+}
+
+.about-header{
+    text-align: left;
+    padding: 5px;
+}
+
+.about-title{
+    padding-top: 5vh;
+}
+
+/*Profile & Text -----------------------------------------------------*/
+
+.about-body{
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: flex-start; /* Align children to the start (left) */
-    padding-top: 30px;
-    padding-bottom: 30px;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 5vh;
+    padding-top: 0;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.about-profile{
+    max-width: 40vw;
+    max-height: 40vh;
+}
+
+.about-text{
+    background-color: rgba(175, 173, 173, 0.363);
+    border-radius: 25px; /* Adjust as needed for roundness */
+    width: auto;
+    height: auto;
+    max-width: 40vw;
+    min-height: 30vh;
+    justify-content: space-around;
+    padding: 5px; /* Adjust padding to control the rectangle's content spacing */
+    margin: 10px 10px; /* Optional: Adjust margin for spacing around the rectangle */
+    overflow: hidden;
+}
+
+/*Lower Buttons--------------------------------------------------------*/
+
+.about-toggle {
+    background-color: rgba(175, 173, 173, 0.363);
+    border-radius: 25px; /* Adjust as needed for roundness */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: small;
+    padding: 10px; /* Adjust padding to control the rectangle's content spacing */
+    margin: auto;
+    max-width: 50vw;
+}
+
+.about-toggle button{
+    background-color: transparent;
+    min-width: 15vw;
     
 }
 
-.about-body, .about-header{
-    text-align: left;
+.about-toggle button:hover , .about-toggle button:focus{
+    outline: none;
+}
+  
+.about-toggle button:hover{
+    font-size: large;
 }
 
-.about-body{
-    font-size: small;
+/*Text Sliding for Body--------------------------------------------------*/
+
+.carousel{
+    overflow:hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.about-text1, .about-text2, .about-list, .about-title{
-    display: block; /* Make about-text behave like a block element */
-    padding-left: 20px; /* Indent text a little bit*/
-    padding-right: 25vw;
+.carousel-inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
+}
+
+.carousel-item{
+    font-size: 0.9rem;
+    white-space: auto;
+    margin: 10px 0 20px 0;
+    white-space: normal;
+    display: inline-flex;
+}
+
+/*For Small Screens-----------------------------------------------------*/
+
+@media screen and (max-width: 875px) {
+    .about{
+        padding: 0;
+    }
+
+    .about-body{
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    .about-profile{
+        max-height: 40vh;
+        padding-bottom: 0;
+    }
+
+    .about-text{
+        max-width: none;
+        width: auto;
+        height: auto;
+    }
+
+    .about-header{
+        padding-top: 0;
+    }
+
+    .about-toggle{
+        max-width: 75vw;
+        padding: 5px;
+    }
+
+    .about-toggle button{
+        min-width: 20vw;
+    }
 }
