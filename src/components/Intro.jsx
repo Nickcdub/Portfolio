@@ -12,9 +12,9 @@ export function Intro(){
         offset: ["start start", "end start"]
     })
 
+
     const spaceY = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
     const hillY = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
-    
     const textY = useTransform(scrollYProgress, [0, 1], ["-30%", "200%"]);
     
     return(

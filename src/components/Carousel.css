@@ -1,0 +1,41 @@
+.carousel{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.carousel-img{
+    width:100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-text, .carousel-list{
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 10px 0 20px 0;
+    white-space: normal;
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: inline-flex;
+    width: 100%;
+    max-height: 100%;
+}
+
+.carousel-list{
+    font-size: 0.9rem;
+    flex-direction: column;
+    max-height: 45vh;
+}
+
+.carousel-list li {
+    padding: 10px; /* Example padding */
+    border-radius: 5px; /* Rounds the corners of list items */
+}

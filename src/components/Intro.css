@@ -4,8 +4,8 @@
   }
 
 .intro{
-    width: 100vw;
-    height: 150vh;
+    min-width: 100%;
+    min-height: 150vh;
     display: grid;
     place-items: center;
     overflow: hidden;

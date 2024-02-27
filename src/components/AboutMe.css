@@ -1,7 +1,8 @@
 .about{
     background-image: url('../assets/img/About-Background.svg');
-    min-height: 99vh;
-    padding: 3vh;
+    min-height: 810px;
+    padding: 2vw;
+    padding-bottom: 0;
 }
 
 /*Title and Number ----------------------------------------------------*/
@@ -26,6 +27,7 @@
 .about-header{
     text-align: left;
     padding: 5px;
+    padding-bottom: 20px;
 }
 
 .about-title{
@@ -43,6 +45,17 @@
     padding-top: 0;
     flex-direction: row-reverse;
     justify-content: space-between;
+    gap: 10vw;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 95vw;
 }
 
 .about-profile{
@@ -60,6 +73,10 @@
     justify-content: space-around;
     padding: 5px; /* Adjust padding to control the rectangle's content spacing */
     margin: 10px 10px; /* Optional: Adjust margin for spacing around the rectangle */
+    outline-color: #f59de2; /* Line color */
+    outline-width: 1px;
+    outline-style: dashed;
+    box-shadow: 0 0 20px #ff00c8;
     overflow: hidden;
 }
 
@@ -75,66 +92,49 @@
     padding: 10px; /* Adjust padding to control the rectangle's content spacing */
     margin: auto;
     max-width: 50vw;
+    gap: 15px;
 }
 
 .about-toggle button{
     background-color: transparent;
     min-width: 15vw;
-    
 }
 
-.about-toggle button:hover , .about-toggle button:focus{
-    outline: none;
-}
-  
+/* This rule will apply when the button is hovered */
 .about-toggle button:hover{
-    font-size: large;
+    font-size: large; /* Increases font size on hover */
 }
 
-/*Text Sliding for Body--------------------------------------------------*/
-
-.carousel{
-    overflow:hidden;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.carousel-inner {
-    white-space: nowrap;
-    transition: transform 0.3s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
-}
-
-.carousel-item{
-    font-size: 0.9rem;
-    white-space: auto;
-    margin: 10px 0 20px 0;
-    white-space: normal;
-    display: inline-flex;
+/* If you want to remove any outline that appears when the button is focused, 
+   but not change the font size, you can keep this rule */
+.about-toggle button:focus{
+    outline: none;
 }
 
 /*For Small Screens-----------------------------------------------------*/
 
 @media screen and (max-width: 875px) {
-    .about{
-        padding: 0;
+
+    .about-title {
+        padding-top: 1vw;
     }
 
     .about-body{
         flex-direction: column;
         padding-bottom: 0;
+        padding-top: 0;
+        max-width: 95vw;
+        gap: 0;
     }
 
     .about-profile{
         max-height: 40vh;
         padding-bottom: 0;
+        padding-top: 0;
     }
 
     .about-text{
-        max-width: none;
-        width: auto;
-        height: auto;
+        max-width: 95vw;
     }
 
     .about-header{
@@ -144,9 +144,12 @@
     .about-toggle{
         max-width: 75vw;
         padding: 5px;
+        margin: auto;
+        gap: 10px
     }
 
     .about-toggle button{
         min-width: 20vw;
+        max-width: 30vw;
     }
 }

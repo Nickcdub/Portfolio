@@ -19,14 +19,18 @@ export const NavBar = () => {
                     >☰</button>
                 </div>
                 <div className={`nav-buttons ${isNavExpanded ? 'active' : ''}`}>
-                <button onClick={() => document.getElementById('About').scrollIntoView({ behavior: 'smooth' })}>
-                    About Me
-                </button>
-                  <button onClick={() => document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' })}>
-                    Projects
-                </button>
-                  <button>Certifications</button>
-                  <button>Contact</button>
+                    <button onClick={() => document.getElementById('About').scrollIntoView({ behavior: 'smooth' })}>
+                        About Me
+                    </button>
+                    <button onClick={() => document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' })}>
+                        Projects
+                    </button>
+                    <button onClick={() => document.getElementById('Certifications').scrollIntoView({ behavior: 'smooth' })}>
+                        Certifications
+                    </button>
+                    <button onClick={() => document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' })}>
+                        Contact
+                    </button>
                 </div>
             </nav>
         </>

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useInView } from 'react-intersection-observer'; 
+import { TextCarousel } from './Carousel'; 
 import Profile from '../assets/img/Profile.svg'
 //For rendering as components come in view
 import './AboutMe.css'
@@ -14,7 +15,17 @@ const personal = "Hello, my name is Nick, I am a passionate problem solver and a
 +"and I am excited to find an opportunity to put my knowledge towards solving meaningful problems"+
 " (beyond high school chemistry)."
 
-const education = "Education"
+const education = "Throughout my academic journey, I demonstrated my proficiency in utilizing a "+
+"wide array of technologies effectively, from conception to deployment, crafting comprehensive "+
+"full-stack applications. These experiences have deepened my technical expertise and enhanced my"+
+" adaptability to various software environments. Beyond the technical aspects, my time at university"+
+" was enriched by collaborating with multiple teams across dynamic settings. In these team endeavors,"+
+" I frequently assumed a proactive role in organizing group activities and effectively delegating "+
+"tasks. One of, if not the largest takeaway from my education was the importance of listening to "+
+"and addressing my teammates' concerns with understanding and openness. This skill has not only "+
+"improved our team dynamics but also significantly enhanced the quality of our collective work. "+
+"By prioritizing empathy in our interactions, we were able to create a more inclusive, productive, "+
+"and innovative environment."
 
 const skills = "Skills"
 
@@ -23,40 +34,20 @@ export function AboutMe() {
     const [activeIndex, setActiveIndex] = useState(0)
     
     //The text items to be displayed for each Carousel index
-    const items = [personal, personal, personal]
+    const items = [personal, education, personal]
     
     //For "Fade In" affect on components
     const { ref, inView } = useInView({
-        threshold: 0.5, // Trigger when 10% visible
+        threshold: 0.3, // Trigger when 10% visible
         triggerOnce: true // Trigger animation once
         // use {inView && ( <></> )} Don't forget in parent ref={ref} 
-      });
-
-
-//Carousel ---------------------------------------------------------------
-
-      const Carousel = () => {
-        return(
-            <div className='carousel' ref={ref}>
-                {inView && (
-                <div className='carousel-inner'
-                style={{transform: `translateX(-${activeIndex * 100}%)`}}>
-                     {items.map((item, index) => (
-                        <div className="carousel-item" key={index}>
-                            {item}
-                        </div>
-                    ))}
-                </div>
-                )}
-            </div>
-        );
-    }
+    });
 
 //Function to style the buttons ----------------------------------------------
 
     function getButtonStyle(index){
         return{
-            background: activeIndex === index ? 'linear-gradient(to right, blue, magenta)' : 'transparent',
+            background: activeIndex === index ? 'linear-gradient(to right, magenta, rgb(63, 6, 161)' : 'transparent',
             color: activeIndex === index ? 'white' : 'initial',
             padding: '10px 10px', // Adjust padding to make the background appear "smaller"
             borderRadius: '20px', // Increase border-radius for more rounded corners
@@ -65,11 +56,11 @@ export function AboutMe() {
         }
     }
 
-//Functions to style smooth rendering once in view
+//Functions to style smooth rendering once in view-------------------------------
     function hiddenStyle() {
         return {
             opacity: '0',
-             transform: 'translateY(70px)',
+             transform: 'translateY(100px)',
             transition: 'opacity 1.1s ease-out, transform 1.1s ease-out'
         };
     }
@@ -89,41 +80,39 @@ export function AboutMe() {
     return(
         <div id='About' className='about' ref={ref}>
             <div style={transitionStyle}>
-            <h1 className='about-header'>
-                    <>
-                        <div className='about-header-number'>
-                            01
-                        </div>
-                        <div className='about-title'>
-                            About Me
-                        </div>
-                    </>
-            </h1>
-            <div className='about-body' ref={ref}>
-                {inView && (<img src={Profile} className="about-profile"/>)}
-                <span className='about-text'>
-                    {Carousel()}
-                </span>
-            </div>
-            {inView && (
-            <div className='about-toggle'>
-                <button className='about-toggle-personal'
-                    style={getButtonStyle(0)}
-                    onClick={() => setActiveIndex(0)}>
-                        Personal
-                </button>
-                <button className='about-toggle-education'
-                    style={getButtonStyle(1)}
-                    onClick={() => setActiveIndex(1)}>
-                        Education
-                </button>
-                <button className='about-toggle-skills'
-                    style={getButtonStyle(2)}
-                    onClick={() => setActiveIndex(2)}>
-                        Skills
-                </button>
-            </div>
-            )}
+                <h1 className='about-header'>
+                    <div className='about-header-number'>
+                        01
+                    </div>
+                    <div className='about-title'>
+                        About Me
+                    </div>
+                </h1>
+                <div className='about-content'>
+                    <div className='about-body'>
+                        <img src={Profile} className="about-profile"/>
+                        <span className='about-text'>
+                            <TextCarousel items={items} activeIndex={activeIndex}/>
+                        </span>
+                    </div>
+                    <div className='about-toggle'>
+                        <button className='about-toggle-personal'
+                            style={getButtonStyle(0)}
+                            onClick={() => setActiveIndex(0)}>
+                                Personal
+                        </button>
+                        <button className='about-toggle-education'
+                            style={getButtonStyle(1)}
+                            onClick={() => setActiveIndex(1)}>
+                                Education
+                        </button>
+                        <button className='about-toggle-skills'
+                            style={getButtonStyle(2)}
+                            onClick={() => setActiveIndex(2)}>
+                                Skills
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     );
