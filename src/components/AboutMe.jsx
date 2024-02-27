@@ -45,18 +45,6 @@ const skills = (<div>
 </ul>
 </div>);
 
-/*`Many of my skill-building experiences happened throughout academic projects that challenged me to expand my understanding of various technologies. It was here that I really developed my skills in:`
-`Core Languages: Java, C#, Python, JavaScript
-Development Principles: Object-Oriented and Dynamic Programming
-Data Management: SQL for database operations
-Backend Development: Understanding server-application-database interactions
-
-In addition, I also explored other topics in my free time. Most of these topics were meant to expand upon previous skills, however, I wasn’t afraid to begin learning completely new skills. These other topics include:
-Full-Stack Development: Integrating front-end and back-end technologies
-Cloud Services: Leveraging Amazon Web Services for scalable solutions
-Web Technologies: Crafting interfaces with React, HTML, CSS
-Emerging Areas: Diving into IT Security Fundamentals and Machine Learning`*/
-
 export function AboutMe() {
     //For the Carousel indeces
     const [activeIndex, setActiveIndex] = useState(0)
