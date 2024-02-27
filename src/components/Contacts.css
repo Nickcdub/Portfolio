@@ -1,4 +1,121 @@
 .contact{
-    background-image: linear-gradient(rgb(0, 4, 67), black);
+    background-image: linear-gradient(transparent, black);
     overflow: hidden;
+}
+
+/*Title and Number ----------------------------------------------------*/
+
+.contact-header-number {
+    position: relative;
+    display: inline-block; /* Ensures the pseudo-element aligns correctly */
+}
+
+.contact-header-number:after {
+    content: '';
+    display: block;
+    width: 200%; /* Line width */ 
+    height: 2px; /* Line thickness */
+    background-color: #ee76d4; /* Line color */
+    box-shadow: 0 0 10px #ff00c8; /* Adjust shadow color and spread as needed */
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Adjusts the space between the text and the line */
+}
+
+.contact-header{
+    text-align: left;
+    padding: 5px;
+}
+
+.contact-title{
+    padding-top: 5vh;
+}
+
+.contact-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Ensure it spans the full height of its parent if needed */
+    height: 100%;
+    /* Add this if you want the content to be centered vertically as well */
+    flex-direction: column;
+}
+
+.contact-container{
+    width: 58%;
+    display: grid;
+    grid-template-columns: 40% 58%;
+    gap: 12%;
+}
+
+.contact-options {
+    display:flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-option{
+    background: rgba(161, 94, 161, 0.363);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    overflow-x: auto;
+}
+
+.contact-option:hover{
+    background: rgb(0, 4, 67);
+    border: 3px solid rgba(161, 94, 161, 0.363);
+}
+
+.contact-option-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-option a {
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.btn-primary{
+    background: linear-gradient(to right, magenta, rgb(63, 6, 161));
+}
+
+.btn-primary:hover{
+    background: rgb(0, 4, 67);
+    border: 3px solid rgba(161, 94, 161, 0.363);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(254, 0, 254, 0.363);
+    resize: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .contact-container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .contact-container{
+        width: 80%;
+    }
+    
 }

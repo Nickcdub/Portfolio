@@ -49,6 +49,10 @@
     align-items: center;
 }
 
+.card:hover{
+    cursor: pointer;
+}
+
 .cardFlip {
     transform: rotateY(180deg); /* Ensures the card flips on the Y-axis */
 }

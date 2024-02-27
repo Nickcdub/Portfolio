@@ -29,7 +29,8 @@ export function Certifications() {
     // use {inView && ( <></> )} Don't forget in parent ref={ref} 
     });
 
-//Functions to style smooth rendering once in view----------------------------------------------------------------
+//Functions to style smooth rendering once in view------------------------------------------------------------------------------------------------------------------
+    
     function hiddenStyle() {
         return {
             opacity: '0',
@@ -48,6 +49,8 @@ export function Certifications() {
 
     const transitionStyle = inView ? visibleStyle() : hiddenStyle();
 
+//Certification HTML---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
     return(
         <div id='Certifications' className='cert' ref={ref}>
             <div style={transitionStyle}>
@@ -58,18 +61,19 @@ export function Certifications() {
                     <div className='cert-title'>
                         Certification
                     </div>
-                    <div className="cert-body">
+                </h1>
+                <div className="cert-body">
                         {Certs.map((cert, index) => (
                             <FlipCard key={index} cert={cert} />
                         ))}
-                    </div>
-                </h1>
+                </div>
             </div>
         </div>
     );
 }
 
-// Define FlipCard as a proper React functional component
+// Define FlipCard as a proper React functional component---------------------------------------------------------------------------------------------------------
+
 const FlipCard = ({ cert }) => {
     const [activeCard, setActiveCard] = useState(false);
 
