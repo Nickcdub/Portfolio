@@ -1,5 +1,7 @@
 import React, {useState, useRef} from "react";
 import { useInView } from 'react-intersection-observer'; 
+import { IoIosDownload } from "react-icons/io";
+import resume from "../assets/img/download-pics/NicholasCurwoodResume.pdf"
 import download from "../assets/img/Download.svg"
 import dl1 from '../assets/img/download-pics/AWSCloudPractitioner.png'
 import dl2 from '../assets/img/download-pics/CompTIASecurity+.png'
@@ -59,14 +61,17 @@ export function Certifications() {
                         03
                     </div>
                     <div className='cert-title'>
-                        Certification
+                        Certifications
                     </div>
                 </h1>
                 <div className="cert-body">
-                        {Certs.map((cert, index) => (
-                            <FlipCard key={index} cert={cert} />
-                        ))}
+                    {Certs.map((cert, index) => (
+                        <FlipCard key={index} cert={cert} />
+                    ))}
                 </div>
+                <a href={resume} download className="cert-btn">
+                    Resume <IoIosDownload />
+                </a>
             </div>
         </div>
     );

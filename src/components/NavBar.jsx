@@ -28,7 +28,7 @@ export const NavBar = () => {
                     <button onClick={() => document.getElementById('Certifications').scrollIntoView({ behavior: 'smooth' })}>
                         Certifications
                     </button>
-                    <button onClick={() => document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' })}>
+                    <button onClick={() => document.getElementById('Contacts').scrollIntoView({ behavior: 'smooth' })}>
                         Contact
                     </button>
                 </div>

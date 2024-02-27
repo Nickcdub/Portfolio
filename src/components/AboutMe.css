@@ -1,5 +1,5 @@
 .about{
-    background-image: url('../assets/img/About-Background.svg');
+    background-image: linear-gradient(black, transparent);
     min-height: 810px;
     padding: 2vw;
     padding-bottom: 0;
@@ -64,12 +64,13 @@
 }
 
 .about-text{
-    background-color: rgba(175, 173, 173, 0.363);
+    background-color:  rgb(60, 0, 67);
     border-radius: 25px; /* Adjust as needed for roundness */
     width: auto;
     height: auto;
     max-width: 40vw;
     min-height: 30vh;
+    max-height: 50vh;
     justify-content: space-around;
     padding: 5px; /* Adjust padding to control the rectangle's content spacing */
     margin: 10px 10px; /* Optional: Adjust margin for spacing around the rectangle */
@@ -77,14 +78,18 @@
     outline-width: 1px;
     outline-style: dashed;
     box-shadow: 0 0 20px #ff00c8;
-    overflow: hidden;
+    overflow-x: auto;
 }
 
 /*Lower Buttons--------------------------------------------------------*/
 
 .about-toggle {
-    background-color: rgba(175, 173, 173, 0.363);
+    background-color: rgb(60, 0, 67);
     border-radius: 25px; /* Adjust as needed for roundness */
+    outline-color: #f59de2; /* Line color */
+    outline-width: 1px;
+    outline-style: dashed;
+    box-shadow: 0 0 20px #ff00c8;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -102,7 +107,7 @@
 
 /* This rule will apply when the button is hovered */
 .about-toggle button:hover{
-    font-size: large; /* Increases font size on hover */
+    font-size: larger;
 }
 
 /* If you want to remove any outline that appears when the button is focused, 

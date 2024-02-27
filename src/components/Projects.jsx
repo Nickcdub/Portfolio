@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useInView } from 'react-intersection-observer'; 
 import { ImageCarousel, ListCarousel } from "./Carousel";
+import { IoIosDownload } from "react-icons/io";
 import on from '../assets/img/radio-on.svg'
 import off from '../assets/img/radio-off.svg'
 import right from '../assets/img/right-arrow.svg'

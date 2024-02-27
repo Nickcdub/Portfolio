@@ -27,14 +27,42 @@ const education = "Throughout my academic journey, I demonstrated my proficiency
 "By prioritizing empathy in our interactions, we were able to create a more inclusive, productive, "+
 "and innovative environment."
 
-const skills = "Skills"
+const skills = (<div>
+<p>Many of my skill-building experiences happened throughout academic projects that challenged me to expand my understanding of various technologies. It was here that I really developed my skills in:</p>
+<ul>
+  <li>•   Core Languages: Java, C#, Python, JavaScript</li>
+  <li>•   Development Principles: Object-Oriented and Dynamic Programming</li>
+  <li>•   Data Management: SQL for database operations</li>
+  <li>•   Backend Development: Understanding server-application-database interactions</li>
+</ul>
+<br />
+<p>In addition, I also explored other topics in my free time. Most of these topics were meant to expand upon previous skills, however, I wasn’t afraid to begin learning completely new skills. These other topics include:</p>
+<ul>
+  <li>•   Full-Stack Development: Integrating front-end and back-end technologies</li>
+  <li>•   Cloud Services: Leveraging Amazon Web Services for scalable solutions</li>
+  <li>•   Web Technologies: Crafting interfaces with React, HTML, CSS</li>
+  <li>•   Emerging Areas: Diving into IT Security Fundamentals and Machine Learning</li>
+</ul>
+</div>);
+
+/*`Many of my skill-building experiences happened throughout academic projects that challenged me to expand my understanding of various technologies. It was here that I really developed my skills in:`
+`Core Languages: Java, C#, Python, JavaScript
+Development Principles: Object-Oriented and Dynamic Programming
+Data Management: SQL for database operations
+Backend Development: Understanding server-application-database interactions
+
+In addition, I also explored other topics in my free time. Most of these topics were meant to expand upon previous skills, however, I wasn’t afraid to begin learning completely new skills. These other topics include:
+Full-Stack Development: Integrating front-end and back-end technologies
+Cloud Services: Leveraging Amazon Web Services for scalable solutions
+Web Technologies: Crafting interfaces with React, HTML, CSS
+Emerging Areas: Diving into IT Security Fundamentals and Machine Learning`*/
 
 export function AboutMe() {
     //For the Carousel indeces
     const [activeIndex, setActiveIndex] = useState(0)
     
     //The text items to be displayed for each Carousel index
-    const items = [personal, education, personal]
+    const items = [personal, education, skills]
     
     //For "Fade In" affect on components
     const { ref, inView } = useInView({

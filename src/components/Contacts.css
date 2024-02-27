@@ -1,6 +1,7 @@
 .contact{
     background-image: linear-gradient(transparent, black);
     overflow: hidden;
+    padding: 2vw;
 }
 
 /*Title and Number ----------------------------------------------------*/
@@ -99,7 +100,7 @@ input, textarea {
     width: 100%;
     padding: 1.5rem;
     border-radius: 0.5rem;
-    background: transparent;
+    background: rgb(60, 0, 67);
     color: white;
     border: 2px solid rgba(254, 0, 254, 0.363);
     resize: none;

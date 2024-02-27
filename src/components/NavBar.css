@@ -88,7 +88,6 @@
   }
   
   .nav button:focus {
-    color: rgb(174, 151, 3) ; /* Sets the background color on hover */
     outline: none;
     background-color: transparent;
   }

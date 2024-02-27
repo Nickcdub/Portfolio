@@ -54,7 +54,7 @@ export function Intro(){
                 }}/>
                 <div className="intro-img3" 
                 style={{
-                    backgroundImage: `url(${Mt3})`,
+                    backgroundColor: "black",
                     backgroundPosition: 'bottom',
                     backgroundSize: 'cover',
                     position: 'absolute',
