@@ -64,7 +64,7 @@ export function AboutMe() {
     function getButtonStyle(index){
         return{
             background: activeIndex === index ? 'linear-gradient(to right, magenta, rgb(63, 6, 161)' : 'transparent',
-            color: activeIndex === index ? 'white' : 'initial',
+            color:'white',
             padding: '10px 10px', // Adjust padding to make the background appear "smaller"
             borderRadius: '20px', // Increase border-radius for more rounded corners
             borderColor: 'white',
