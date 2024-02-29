@@ -70,15 +70,13 @@
     height: auto;
     max-width: 40vw;
     min-height: 30vh;
-    max-height: 50vh;
     justify-content: space-around;
-    padding: 5px; /* Adjust padding to control the rectangle's content spacing */
+    padding: 2%; /* Adjust padding to control the rectangle's content spacing */
     margin: 10px 10px; /* Optional: Adjust margin for spacing around the rectangle */
     outline-color: #f59de2; /* Line color */
     outline-width: 1px;
     outline-style: dashed;
     box-shadow: 0 0 20px #ff00c8;
-    overflow-x: auto;
 }
 
 /*Lower Buttons--------------------------------------------------------*/
@@ -118,7 +116,7 @@
 
 /*For Small Screens-----------------------------------------------------*/
 
-@media screen and (max-width: 875px) {
+@media screen and (max-width: 1000px) {
 
     .about-title {
         padding-top: 1vw;
