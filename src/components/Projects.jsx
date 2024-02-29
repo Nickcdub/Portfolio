@@ -23,14 +23,14 @@ import './Projects.css'
 //Added projects will automatically update the page.--------------------------------------------------------------------------------------------------------------------------------------------------
 const projects = [
   {
-    description: ["• Led a team of 3 to develop an intricate Java-based dungeon crawler game, featuring randomized layouts, diverse player classes, and a variety of enemies and bosses",
-                  "• Adopted Agile methodologies such as Scrum and Continuous Integration to ensure rapid iteration progress while maintaining adaptability",
-                  "• Resulted in a user-friendly and engaging game experience that exceeded expectations, coupled with robust technical documentation and evenly maintained code quality through bi-weekly code reviews",
-                  "Technologies and Frameworks: Java, Git, SQL, Java Swing UI, Agile Methodologies, Object Oriented Programming (OOP), Model-View-Controller (MVC), Full-Stack Development"],
-    image: img1,
-    download: img1Download,
-    downloadName: "RPG.png",
-    link: "https://github.com/Nickcdub/mOOnQuest"
+    description: ["• Collaborated in a 4-member team in enhancing an existing venture into artificial life, evolving a virtual predator’s hunting capabilities through the implementation of focal vision",
+                  "• Implemented enhancements using JavaScript and utilized Python for key performance analysis, improving simulation realism in order to mimic realistic hunting conditions",
+                  "• Presented findings along with data to highlight the biological prerequisite knowledge, display the computational methods behind the solution, as well as future directions within the study.",
+                  "Technologies and Frameworks: JavaScript, Python, SQL, Machine Learning, Git, HTML"],
+    image: img3,
+    download: img3Download,
+    downloadName: "ArtificialLife.png",
+    link: "https://nickcdub.github.io/Evolutionary_Robotic_Hunting_Gathering_BinocularVision/"
   },
   {
     description: ["• Conducted comparative research on Convolutional Neural Networks (CNN) versus Bag-of-Words (BoW) algorithms for sentiment analysis on X (Twitter) data, focused on the ethics of AI-generated art.",
@@ -42,14 +42,14 @@ const projects = [
     link: "https://github.com/Nickcdub/Sentiment_Analysis_Project"
   },
   {
-    description: ["• Collaborated in a 4-member team in enhancing an existing venture into artificial life, evolving a virtual predator’s hunting capabilities through the implementation of focal vision",
-                  "• Implemented enhancements using JavaScript and utilized Python for key performance analysis, improving simulation realism in order to mimic realistic hunting conditions",
-                  "• Presented findings along with data to highlight the biological prerequisite knowledge, display the computational methods behind the solution, as well as future directions within the study.",
-                  "Technologies and Frameworks: JavaScript, Python, SQL, Machine Learning, Git, HTML"],
-    image: img3,
-    download: img3Download,
-    downloadName: "ArtificialLife.png",
-    link: "https://nickcdub.github.io/Evolutionary_Robotic_Hunting_Gathering_BinocularVision/"
+    description: ["• Led a team of 3 to develop an intricate Java-based dungeon crawler game, featuring randomized layouts, diverse player classes, and a variety of enemies and bosses",
+                  "• Adopted Agile methodologies such as Scrum and Continuous Integration to ensure rapid iteration progress while maintaining adaptability",
+                  "• Resulted in a user-friendly and engaging game experience that exceeded expectations, coupled with robust technical documentation and evenly maintained code quality through bi-weekly code reviews",
+                  "Technologies and Frameworks: Java, Git, SQL, Java Swing UI, Agile Methodologies, Object Oriented Programming (OOP), Model-View-Controller (MVC), Full-Stack Development"],
+    image: img1,
+    download: img1Download,
+    downloadName: "RPG.png",
+    link: "https://github.com/Nickcdub/mOOnQuest"
   },
   {
     description: ["• Gained practical experience through the development of a rudimentary Sudoku Solver using React, which served as a foundational project to deepen personal understanding of React's fundamentals.",
