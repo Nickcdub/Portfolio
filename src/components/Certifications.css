@@ -128,4 +128,8 @@
         flex-direction: column;
     }
 
+    .cert-btn {
+        max-width: none;
+    }
+
 }
