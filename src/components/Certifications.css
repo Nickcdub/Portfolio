@@ -2,8 +2,8 @@
     /*background-image: url('../assets/img/Cert-Background.svg');*/
     padding: 2vw;
     padding-bottom: 0;
-    overflow: hidden;
     min-height: 80vh;
+    overflow: hidden;
     height: auto;
 }
 
@@ -95,8 +95,9 @@
 /*Lower resume button-----------------------------------------------------------------------*/
 
 .cert-btn{
-    position: absolute;
-    left: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center;
     background-color: rgb(60, 0, 67);
     border-radius: 25px; /* Adjust as needed for roundness */
     outline-color: #f59de2; /* Line color */
@@ -107,6 +108,7 @@
     color: white;
     padding: 10px;
     min-width: 15vw;
+    max-width: 20%;
     height: fit-content;
 }
 
