@@ -62,7 +62,7 @@ const projects = [
   },
   {
     description: ["• Constructed a closed virtual ecosystem consisting of artificial plants and animals that thrive or decline based on food and room for growth",
-                  "• Developed a color mutation system to allow the continuation of each respective species (plants and animats) through natural selection",
+                  "• Developed a color mutation system to allow the continuation of each respective species (plants and 'animats') through natural selection",
                   "• Served as a foundation to my understanding of Javascript frontend as well as a predecessor to my work on the artificial life vision research",
                   "Technologies and Frameworks: JavaScript, HTML, CSS, Git, Artificial Life"],
     image: img5,

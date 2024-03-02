@@ -5,7 +5,7 @@
 
 .intro{
     min-width: 100%;
-    min-height: 150vh;
+    min-height: 100vw;
     display: grid;
     place-items: center;
     overflow: hidden;
@@ -32,9 +32,9 @@
 }
 
 /* image overlay from front to back*/
-.intro-img, .intro-img1, .intro-img2, .intro-img3{
+.intro-img, .intro-img1, .intro-img3{
     width: 100vw;
-    height: 150vh;
+    height: 101%;
     position: absolute; /* If you want them to directly overlay each other */
     top: 0;
     left: 0;
@@ -42,7 +42,7 @@
 }
 
 .intro-img1{
-    z-index: 30;
+   z-index: 30;
 }
 
 .intro-img2{
@@ -51,4 +51,10 @@
 
 .intro-img3{
     z-index: 0;
+}
+
+@media screen and (max-width: 750px) {
+    .intro{
+        min-height: 175vw;
+    }
 }

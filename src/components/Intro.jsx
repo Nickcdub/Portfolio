@@ -14,7 +14,7 @@ export function Intro(){
 
 
     const spaceY = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
-    const hillY = useTransform(scrollYProgress, [0, 1], ["0%", "-10%"]);
+    const cityY = useTransform(scrollYProgress, [0, 1], ["100%", "20%"]);
     const textY = useTransform(scrollYProgress, [0, 1], ["-30%", "200%"]);
     
     return(
@@ -50,7 +50,7 @@ export function Intro(){
                         backgroundSize: 'cover',
                         position: 'absolute',
                         inset: 0,
-                        y: hillY
+                        y: cityY
                 }}/>
                 <div className="intro-img3" 
                 style={{
