@@ -2,6 +2,8 @@
     /*background-image: url('../assets/img/Project-Background.svg');*/
     overflow: hidden;
     min-height: 760px;
+    padding: 2vw;
+    
 }
 
 /*Title and Number ----------------------------------------------------*/
@@ -119,6 +121,10 @@
 
 .radio-buttons-container img {
     width: 5vw;
+}
+
+.radio-buttons-container img:hover {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 700px) {
