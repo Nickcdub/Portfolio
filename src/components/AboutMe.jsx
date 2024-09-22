@@ -27,6 +27,33 @@ const education = "Throughout my academic journey, I demonstrated my proficiency
 "By prioritizing empathy in our interactions, we were able to create a more inclusive, productive, "+
 "and innovative environment."
 
+const professional = (<div>
+<h3>Security Analyst I | Transaction Network Services | Seattle, WA | 05/2024 - Present</h3>
+<hr />
+<br />
+<ul>
+  <li>•   AWS Security Assessments - Performed security assessments on AWS resources to ensure secure configurations of security groups, Kinesis
+  data streams, and appropriate public Elastic IPs.</li>
+  <br />
+  <li>•   Software Request Reviews - Reviewed and evaluated software requests from the development team, gaining familiarity with development
+  technologies, their capabilities, and potential vulnerabilities to ensure compliance with security policies.</li>
+  <br />
+  <li>•   Risk Management - Conducted access reviews identifying individuals with expired privileges and aggregated data on all users to optimize the
+  access review process for future quarterly reviews.</li>
+</ul>
+<br />
+<br />
+<h3>Algorithms Grading Assistant | University of Washington | Tacoma, WA | 2023</h3>
+<hr />
+<br />
+<ul>
+  <li>•   Collaborated closely with Professor Chris Marriott in the TCSS 343 Algorithms course, efficiently evaluating and grading a class of 35 students</li>
+  <br />
+  <li>•   Software Request Reviews - Reviewed and evaluated software requests from the development team, gaining familiarity with development
+  technologies, their capabilities, and potential vulnerabilities to ensure compliance with security policies.</li>
+</ul>
+</div>)
+
 const skills = (<div>
 <p>Many of my skill-building experiences happened throughout academic projects that challenged me to expand my understanding of various technologies. It was here that I really developed my skills in:</p>
 <ul>
@@ -50,7 +77,7 @@ export function AboutMe() {
     const [activeIndex, setActiveIndex] = useState(0)
     
     //The text items to be displayed for each Carousel index
-    const items = [personal, education, skills]
+    const items = [personal, education, professional, skills]
     
     //For "Fade In" affect on components
     const { ref, inView } = useInView({
@@ -122,9 +149,14 @@ export function AboutMe() {
                             onClick={() => setActiveIndex(1)}>
                                 Education
                         </button>
-                        <button className='about-toggle-skills'
+                        <button className='about-toggle-professional'
                             style={getButtonStyle(2)}
                             onClick={() => setActiveIndex(2)}>
+                                Professional
+                        </button>
+                        <button className='about-toggle-skills'
+                            style={getButtonStyle(3)}
+                            onClick={() => setActiveIndex(3)}>
                                 Skills
                         </button>
                     </div>

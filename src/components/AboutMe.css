@@ -94,7 +94,7 @@
     font-size: small;
     padding: 10px; /* Adjust padding to control the rectangle's content spacing */
     margin: auto;
-    max-width: 50vw;
+    /*max-width: 50vw;*/
     gap: 15px;
 }
 
@@ -145,7 +145,7 @@
     }
 
     .about-toggle{
-        max-width: 75vw;
+        /*max-width: 75vw;*/
         padding: 5px;
         margin: auto;
         gap: 10px
