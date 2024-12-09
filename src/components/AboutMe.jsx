@@ -31,26 +31,40 @@ const professional = (<div>
 <h3>Security Analyst I | Transaction Network Services | Seattle, WA | 05/2024 - Present</h3>
 <hr />
 <br />
+<p>In 2024, I joined Transaction Network Services as a Security Analyst I for the Information Security department. 
+    I had previously developed a foundational background in security and had worked with AWS; I saw this role as an opportunity to build on these skills. 
+    My responsibilities included:</p>
+<br />
 <ul>
-  <li>•   AWS Security Assessments - Performed security assessments on AWS resources to ensure secure configurations of security groups, Kinesis
-  data streams, and appropriate public Elastic IPs.</li>
+  <li>•   AWS Risk Management - Evaluated AWS resources to ensure secure Kinesis data stream configurations and appropriate restrictions on outbound internet access for Elastic IPs on TNS' EC2 instances.</li>
   <br />
-  <li>•   Software Request Reviews - Reviewed and evaluated software requests from the development team, gaining familiarity with development
-  technologies, their capabilities, and potential vulnerabilities to ensure compliance with security policies.</li>
+  <li>•   Software Request Reviews - Reviewed and evaluated enterprise-wide software requests; gained familiarity with development technology
+    capabilities and potential vulnerabilities to ensure compliance with security policies.</li>
   <br />
-  <li>•   Risk Management - Conducted access reviews identifying individuals with expired privileges and aggregated data on all users to optimize the
-  access review process for future quarterly reviews.</li>
+  <li>•   Security Assessments - Conducted assessments on user access to align with standards such as NIST 3100, ISO 27001, PCI DSS, SOC 1, SOC 2, 
+    and GDPR to identify, mitigate, and manage risks across multiple environments.</li>
+  <br />
+  <li>•   Risk Ticketing - Maintained and reported risk and incidents using the Salesforce Ticketing System.</li>
+  <br />
+  <li>•   Threat Hunting - Utilized CrowdStrike for threat hunting and malware analysis, and employed the CrowdStrike sandbox to measure threats within lines of communication.</li>
+  <br />
+  <li>•   File Integrity Monitoring FIM - Managed Tripwire to monitor critical system configurations and detected unauthorized changes, which contributed to compliance with industry standards.</li>
+  <br />
+  <li>•   Training Exercises - Launched engaging enterprise-wide security training exercises through KnowBe4; derived measurable goals in phishing simulation click-through rates and employee security practices.</li>
 </ul>
 <br />
 <br />
 <h3>Algorithms Grading Assistant | University of Washington | Tacoma, WA | 2023</h3>
 <hr />
 <br />
+<p>In 2023, after completing my Computer Science course in Algorithms, I was approached by my professor to assist him with his next Algorithms course. 
+    When I joined the University of Washington as an Algorithms Grading Assistant for Professor Chris Marriott, my responsibilities included:</p>
+<br />
 <ul>
-  <li>•   Collaborated closely with Professor Chris Marriott in the TCSS 343 Algorithms course, efficiently evaluating and grading a class of 35 students</li>
+  <li>•   Collaborated closely with Professor Chris Marriott in the TCSS 343 Algorithms course, efficiently evaluated and graded a class of 35 students</li>
   <br />
-  <li>•   Software Request Reviews - Reviewed and evaluated software requests from the development team, gaining familiarity with development
-  technologies, their capabilities, and potential vulnerabilities to ensure compliance with security policies.</li>
+  <li>•   Demonstrated an advanced understanding of dynamic programming, recurrence relations, and a wide array of algorithms to enhancethe
+  academic experience of students through detailed feedback and actionable insights</li>
 </ul>
 </div>)
 
