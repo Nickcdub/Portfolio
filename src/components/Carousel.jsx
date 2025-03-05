@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './Carousel.css'
-import img1 from '../assets/img/NLPFinalProjectPoster.svg'
-import img2 from '../assets/img/RPG.svg'
+
 
 export const ImageCarousel = ({items, activeIndex}) => {
 
@@ -33,7 +32,7 @@ export const TextCarousel = ({items, activeIndex}) => {
         <div className='carousel'>
             <div className='inner'
                  ref={innerRef} // Apply ref here
-                 style={{transform: `translateX(-${activeIndex * 100}%)`}}>
+                 style={{transform: `translateX(-${activeIndex * 110}%)`}}>
                 {items.map((item, index) => (
                     <CarouselText key={index} item={item}/> // Removed ref from here
                 ))}
@@ -46,7 +45,7 @@ export const ListCarousel = ({items, activeIndex}) => {
     return (
         <div className='carousel'>
             <div className='inner'
-                 style={{transform: `translateX(-${activeIndex * 100}%)`}}>
+                 style={{transform: `translateX(-${activeIndex * 110}%)`}}>
                 {items.map((item, index) => ( // Added index for key prop
                     <CarouselList key={index} item={item}/>
                 ))}

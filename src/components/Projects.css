@@ -46,7 +46,21 @@
 
 .project-body-presenter{
     max-width: 70vw;
-    
+}
+
+.project-body-desc{
+    background-color: rgb(60, 0, 67);
+    border-radius: 25px; /* Adjust as needed for roundness */
+    width: auto;
+    height: auto;
+    margin: 10px 10px; /* Optional: Adjust margin for spacing around the rectangle */
+    justify-content: space-around;
+    padding: 3px; /* Adjust padding to control the rectangle's content spacing */
+    outline-color: #f59de2; /* Line color */
+    outline-width: 1px;
+    outline-style: dashed;
+    box-shadow: 0 0 20px #ff00c8;
+    overflow: hidden;
 }
 
 .project-body-image{
@@ -85,24 +99,6 @@
   .carousel-download:hover, .carousel-link:hover{
     height: 40%;
   }
-
-.project-body-desc{
-    background-color: rgb(60, 0, 67);
-    border-radius: 25px; /* Adjust as needed for roundness */
-    width: auto;
-    height: auto;
-    max-width: 30vw;
-    max-height: 50vw;
-    margin: 10px 10px; /* Optional: Adjust margin for spacing around the rectangle */
-    justify-content: space-around;
-    padding: 3px; /* Adjust padding to control the rectangle's content spacing */
-    outline-color: #f59de2; /* Line color */
-    outline-width: 1px;
-    outline-style: dashed;
-    box-shadow: 0 0 20px #ff00c8;
-    max-height: 100%;
-    overflow: hidden;
-}
 
 /*Radio Buttons Component------------------------------------------------------------------------------*/
 
@@ -165,7 +161,7 @@
     }
 
     .project-body-desc{
-        max-height: 45vh;
+        
         overflow: hidden;
     }
 

@@ -10,7 +10,6 @@
     place-items: center;
     overflow: hidden;
     position: relative;
-    background-color: black;
     box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
 }
 
@@ -33,7 +32,8 @@
 
 /* image overlay from front to back*/
 .intro-img, .intro-img1, .intro-img3{
-    width: 100vw;
+    /*width: 100vw;*/
+    width: 100%;
     height: 101%;
     position: absolute; /* If you want them to directly overlay each other */
     top: 0;
@@ -51,6 +51,7 @@
 
 .intro-img3{
     z-index: 0;
+    background-image: url('../assets/img/Star_Background.svg'); /* Add your background image */
 }
 
 @media screen and (max-width: 750px) {

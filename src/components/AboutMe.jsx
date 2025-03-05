@@ -63,26 +63,28 @@ const professional = (<div>
 <ul>
   <li>•   Collaborated closely with Professor Chris Marriott in the TCSS 343 Algorithms course, efficiently evaluated and graded a class of 35 students</li>
   <br />
-  <li>•   Demonstrated an advanced understanding of dynamic programming, recurrence relations, and a wide array of algorithms to enhancethe
+  <li>•   Demonstrated an advanced understanding of dynamic programming, recurrence relations, and a wide array of algorithms to enhance the
   academic experience of students through detailed feedback and actionable insights</li>
 </ul>
 </div>)
 
 const skills = (<div>
 <p>Many of my skill-building experiences happened throughout academic projects that challenged me to expand my understanding of various technologies. It was here that I really developed my skills in:</p>
+<br />
 <ul>
-  <li>•   Core Languages: Java, C#, Python, JavaScript</li>
-  <li>•   Development Principles: Object-Oriented and Dynamic Programming</li>
-  <li>•   Data Management: SQL for database operations</li>
-  <li>•   Backend Development: Understanding server-application-database interactions</li>
+  <li>   Core Languages: Java, C#, Python, JavaScript</li>
+  <li>   Development Principles: Object-Oriented and Dynamic Programming</li>
+  <li>   Data Management: SQL for database operations</li>
+  <li>   Backend Development: Understanding server-application-database interactions</li>
 </ul>
 <br />
 <p>In addition, I also explored other topics in my free time. Most of these topics were meant to expand upon previous skills, however, I wasn’t afraid to begin learning completely new skills. These other topics include:</p>
+<br />
 <ul>
-  <li>•   Full-Stack Development: Integrating front-end and back-end technologies</li>
-  <li>•   Cloud Services: Leveraging Amazon Web Services for scalable solutions</li>
-  <li>•   Web Technologies: Crafting interfaces with React, HTML, CSS</li>
-  <li>•   Emerging Areas: Diving into IT Security Fundamentals and Machine Learning</li>
+  <li>   Full-Stack Development: Integrating front-end and back-end technologies</li>
+  <li>   Cloud Services: Leveraging Amazon Web Services for scalable solutions</li>
+  <li>   Web Technologies: Crafting interfaces with React, HTML, CSS</li>
+  <li>   Emerging Areas: Diving into IT Security Fundamentals and Machine Learning</li>
 </ul>
 </div>);
 

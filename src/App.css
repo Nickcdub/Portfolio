@@ -24,11 +24,9 @@ body, html {
   background-attachment: fixed; /* Keep the image fixed during scroll */
   max-width: 1500px;
   margin: 0 auto;
-  min-width: 360px;
-  /*padding: 2rem;*/
+  min-width: 67%;
   padding: 0;
   text-align: center;
-  /*background-image: url('./assets/img/Background.svg');*/
 }
 
 .read-the-docs {

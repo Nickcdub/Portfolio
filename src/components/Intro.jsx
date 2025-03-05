@@ -54,7 +54,7 @@ export function Intro(){
                 }}/>
                 <div className="intro-img3" 
                 style={{
-                    backgroundColor: "black",
+                    /*backgroundColor: "red",*/
                     backgroundPosition: 'bottom',
                     backgroundSize: 'cover',
                     position: 'absolute',
