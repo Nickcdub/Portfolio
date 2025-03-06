@@ -1,11 +1,11 @@
 #root > .intro {
     padding-top: 0;
     padding-left: 0;
-  }
+}
 
-.intro{
+.intro {
     min-width: 100%;
-    min-height: 100vw;
+    height: 200vh;
     display: grid;
     place-items: center;
     overflow: hidden;
@@ -14,48 +14,63 @@
 }
 
 .intro-text {
-    width: 100%; /* Take the full width to center text properly */
-    height: 100%; /* Full height to align text vertically */
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Ensure text within Typewriter is centered */
-    position: absolute; /* Corrected: Remove the duplicate position property */
-    font-weight: bold; /* Adjust if 'font' shorthand is not intended for other font properties */
+    text-align: center;
+    position: absolute;
+    font-weight: bold;
     color: white;
     z-index: 10;
     text-shadow: 0 0 10px #9900ff;
-    background-image: url('../assets/img/Stars.svg'); /* Add your background image */
-    background-size: cover; /* Ensure the image covers the element */
-    background-position: center; /* Center the background image */
+    background-image: url('../assets/img/Stars.svg');
+    background-size: cover;
+    background-position: center;
 }
 
 /* image overlay from front to back*/
-.intro-img, .intro-img1, .intro-img3{
-    /*width: 100vw;*/
+.intro-img, .intro-img1, .intro-img3 {
     width: 100%;
-    height: 101%;
-    position: absolute; /* If you want them to directly overlay each other */
+    height: 100%;
+    position: absolute;
     top: 0;
     left: 0;
     background-position: center 75%;
+    background-size: cover;
 }
 
-.intro-img1{
+.intro-img1 {
    z-index: 30;
 }
 
-.intro-img2{
+.intro-img2 {
     z-index: 20;
 }
 
-.intro-img3{
+.intro-img3 {
     z-index: 0;
-    background-image: url('../assets/img/Star_Background.svg'); /* Add your background image */
+    background-image: url('../assets/img/Star_Background.svg');
 }
 
+/* For narrow screens */
 @media screen and (max-width: 750px) {
-    .intro{
-        min-height: 175vw;
+    .intro {
+        height: 200vh;
+    }
+}
+
+/* For wide screens (width > 2 * height) */
+@media screen and (min-aspect-ratio: 2/1) {
+    .intro {
+        height: 300vh;
+    }
+}
+
+/* For extra wide screens (width > 3 * height) */
+@media screen and (min-aspect-ratio: 3/1) {
+    .intro {
+        height: 400vh;
     }
 }

@@ -13,24 +13,47 @@
 body, html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevents horizontal scroll */
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-image: url('./assets/img/Background.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 #root {
-  background-image: url('./assets/img/Background.svg');
-  background-size: cover; /* Cover the entire page */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-attachment: fixed; /* Keep the image fixed during scroll */
-  max-width: 1500px;
-  margin: 0 auto;
-  min-width: 67%;
-  padding: 0;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add a content wrapper to maintain proper layout */
+.content-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .read-the-docs {
   color: #888;
   font-size: xx-small;
   background-color: black;
+}
+
+/* Add a loading class for the Suspense fallback */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 1.2rem;
+  color: white;
 }
