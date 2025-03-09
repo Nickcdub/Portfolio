@@ -8,6 +8,7 @@ import right from '../assets/img/right-arrow.svg'
 import left from '../assets/img/left-arrow.svg'
 import download from '../assets/img/Download.svg'
 import link from '../assets/img/Link.svg'
+import ragChatbotDownload from '../assets/img/download-pics/RAGChatbot.png'
 import img1Download from '../assets/img/download-pics/RPG.png'
 import img2Download from '../assets/img/download-pics/NLPFinalProjectPoster.png'
 import img3Download from '../assets/img/download-pics/EvolutionData.png'
@@ -23,7 +24,20 @@ import './Projects.css'
 //Added projects will automatically update the page.--------------------------------------------------------------------------------------------------------------------------------------------------
 const projects = [
   {
-    description: ["• Collaborated in a 4-member team in enhancing an existing venture into artificial life, evolving a virtual predator’s hunting capabilities through the implementation of focal vision",
+    description: [
+      "• Developed a Retrieval-Augmented Generation (RAG) system that enhances large language model capabilities by integrating domain-specific document knowledge",
+      "• Implemented an efficient vector-based retrieval system capable of processing and searching large documents including PDFs with 11,000+ pages",
+      "• Created a responsive chat interface that provides factual responses with cited sources, ensuring accountability and traceability of information",
+      "• Engineered memory-efficient processing that handles large document collections through streaming and batched operations",
+      "Technologies and Frameworks: Python, Flask, ChromaDB, LangChain, Hugging Face Embeddings, HTML/CSS/JavaScript, LM Studio"
+    ],
+    image: ragChatbotDownload, // Using the PNG as both the image and download since SVG is not available
+    download: ragChatbotDownload,
+    downloadName: "RAGChatbot.png",
+    link: "https://github.com/Nickcdub/My_First_RAG_Model"
+  },
+  {
+    description: ["• Collaborated in a 4-member team in enhancing an existing venture into artificial life, evolving a virtual predator's hunting capabilities through the implementation of focal vision",
                   "• Implemented enhancements using JavaScript and utilized Python for key performance analysis, improving simulation realism in order to mimic realistic hunting conditions",
                   "• Presented findings along with data to highlight the biological prerequisite knowledge, display the computational methods behind the solution, as well as future directions within the study.",
                   "Technologies and Frameworks: JavaScript, Python, SQL, Machine Learning, Git, HTML"],
