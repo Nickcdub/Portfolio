@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Nick's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .error-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .error-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #e74c3c;
+        }
+        
+        .error-message {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        
+        .error-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            color: #e74c3c;
+        }
+        
+        .back-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+        
+        @media (max-width: 480px) {
+            .error-container {
+                padding: 20px;
+            }
+            
+            .error-title {
+                font-size: 24px;
+            }
+            
+            .error-message {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">⚠️</div>
+        <h1 class="error-title">An Error Occurred</h1>
+        <p class="error-message">
+            Sorry, something went wrong. The system encountered an error while processing your request.
+        </p>
+        <a href="javascript:history.back()" class="back-button">Go Back</a>
+    </div>
+</body>
+</html> 
