@@ -31,13 +31,13 @@ export function Intro(){
                         autoStart: true,
                         loop: true,
                         delay: 40,
-                        strings:[
-                            "Hello, I am Nick",
-                            "I am a Problem Solver",
-                            "I am a Lifelong Learner",
-                            "I am a Team Player",
-                            "I am a Software Engineer."
-                        ]
+                        strings: [
+                            "Hello, my name is Nick",
+                            "It's nice to meet you!",
+                            "Welcome to my Portfolio!",
+                            "Please take a look around!",
+                            "Drop an email and say hello!"
+                        ]              
                     }}
                 />
             </motion.h1>
