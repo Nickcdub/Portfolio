@@ -18,13 +18,24 @@ body, html {
 }
 
 body {
-  background-image: url('./assets/img/Background.svg');
+  min-height: 100vh;
+  background: linear-gradient(
+  90deg,
+#00244b 0%,      /* darkened blue edge (left) */
+  #004b9b 15%,     /* neon blue inner glow */
+  #9b43df 50%,     /* blended violet center */
+  #db006e 85%,     /* neon magenta inner glow */
+  #630031  100%     /* dark magenta edge (right) */
+);
+
+
+  background-attachment: fixed; /* optional: keeps it static while scrolling */
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 100vh;
+  margin: 0;
 }
+
 
 #root {
   width: 100%;
